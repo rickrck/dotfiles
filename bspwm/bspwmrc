@@ -3,6 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 polybar example &
+nitrogen --restore &
+dunst &
 
 bspc monitor -d I II III IV V VI
 
