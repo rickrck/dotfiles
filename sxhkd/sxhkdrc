@@ -152,7 +152,7 @@ XF86MonBrightnessDown
 
 # CONFIG TAMBAHAN COY BUAT ENAK AJA
 super + alt + Right
-  bspc node -d next.local --follow && bspc node -f next.local
+  bspc node -d next.local --follow && bspc node -f
 
 super + alt + Left
-  bspc node -d prev.local --follow && bspc node -f prev.local
+  bspc node -d prev.local --follow && bspc node -f
