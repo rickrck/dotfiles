@@ -74,9 +74,18 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+setopt auto_cd
+# setopt correct (GANGGU)
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+
 # User configuration
 alias ls="exa --icons"
 alias vim="nvim"
+alias c="clear"
+alias q="exit"
+
+eval "$(starship init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,3 +113,7 @@ alias vim="nvim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export PATH="$PATH:$HOME/flutter/bin"
+
+eval "$(atuin init zsh)"
