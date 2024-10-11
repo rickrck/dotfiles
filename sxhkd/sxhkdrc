@@ -16,7 +16,7 @@ super + Escape
 
 # Restart kalo ada config baru di sxhkd
 super + r
-  pkill sxhkd; sxhkd &
+  bspc wm -r; pkill sxhkd; sxhkd &
 #
 # bspwm hotkeys
 #
@@ -25,9 +25,10 @@ super + r
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
+# DICOMMENT soalnya suka kepencet super + w hehe
 # close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+# super + {_,shift + }w
+	# bspc node -{c,k}
 
 # close 
 super + q
@@ -75,8 +76,8 @@ super + {_,shift + }c
 
 # focus the next/previous desktop in the current monitor
 # DICOMMENT PAKE CONFIG BARU
-#super + bracket{left,right}
-super + {Left,Right}
+super + bracket{left,right}
+# super + {Left,Right}
   bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -156,3 +157,7 @@ super + alt + Right
 
 super + alt + Left
   bspc node -d prev.local --follow && bspc node -f
+
+# Hide/Unhide Polybar
+super + alt + p
+  ~/.config/polybar/toggle-polybar.sh
