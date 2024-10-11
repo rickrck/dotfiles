@@ -10,3 +10,11 @@
 - **Shell**: [zsh](https://www.zsh.org)
 - **Launcher**: [rofi](https://github.com/davatorium/rofi)
 
+## Finish Configuration
+
+- [x] polybar
+- [x] kitty
+- [ ] rofi
+- [ ] Open Apps
+- [ ] Neovim
+
