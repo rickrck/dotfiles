@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-polybar example &
+$HOME/.config/polybar/launch.sh &
 nitrogen --restore &
 dunst &
 
