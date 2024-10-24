@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+case "$1" in
+  --menu)
+    rofi -show drun \
+		 #-theme $HOME/.config/bspwm/rices/${RICETHEME}/launcher.rasi;;
+      -theme $HOME/.config/rofi/config.rasi;;
+
+  --terminal)
+    kitty;;
+
+  --floating)
+    alacritty --class FloaTerm,Alacritty \
+					-o window.dimensions.lines=22 \
+					window.dimensions.columns=90;;
+  
+  --update)
+    kitty --hold --class FloaTerm \
+          --override font_size=12 \
+          --override initial_window_height=22c \
+          --override initial_window_width=90c \
+          ~/.config/scripts/Updates --update-system;;
+
+  --checkupdates)
+    kitty --hold --class Updating \
+          --override font_size=12 \
+          --override initial_window_height=22c \
+          --override initial_window_width=47c \
+          ~/.config/scripts/Updates --print-updates;;
+	
+
+  --ranger)
+    alacritty --class FloaTerm,Alacritty \
+					-o window.dimensions.lines=14 \
+					   window.dimensions.columns=90 \
+					-e ranger;;
+
+  --nvim)
+    alacritty -e nvim;;
+
+  --music)
+    alacritty --class FloaTerm,Alacritty \
+					-o window.dimensions.lines=18 \
+					   window.dimensions.columns=67 \
+					-e ncmpcpp;;
+
+  --fetch)
+    alacritty --hold --class FloaTerm,Alacritty \
+					-o window.dimensions.lines=26 \
+					   window.dimensions.columns=40 \
+					-e ~/.local/bin/sysfetch;;
+
+  #Apps
+  --filemanager)
+	thunar;;
+
+  --browser)
+    brave;;
+	#firefox;;
+  --discord)
+    discord;;
+
+  --editor)
+	geany;;
+
+  --telegram)
+	telegram;;
+
+  --whats)
+	whatsapp-nativefier --disable-gpu;;
+
+  --soundcontrol)
+    pavucontrol;;
+
+  *)
+    echo "Option not available";;
+esac
