@@ -10,6 +10,7 @@ local options = {
     java = { "google-java-format" },
     cpp = { "clang-format" },
     c = { "clang-format" },
+    go = { "gopls" },
   },
 
   -- format_on_save = {

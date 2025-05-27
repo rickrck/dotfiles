@@ -157,5 +157,27 @@ return {
   },
   { "nvzone/volt" , lazy = true },
   { "nvzone/menu" , lazy = true },
+  -- {
+  --  "vhyrro/luarocks.nvim",
+  --  priority = 1001, -- this plugin needs to run before anything else
+  --  opts = {
+  --  rocks = { "magick" },
+  --  },
+  -- },
+  -- {
+  --  "3rd/image.nvim",
+  --  dependencies = { "luarocks.nvim" },
+  --  opts = {},
+  --  config = function()
+  --  require "configs.images"
+  --  end
+  -- },
+  rocks = {
+    hererocks = true,
+  },
+  spec = {
+    "3rd/image.nvim",
+    opts = {}
+  },
 }
 
