@@ -3,8 +3,12 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 $HOME/.config/polybar/launch.sh &
+
+# Sensi mouse
+xinput --set-prop 'Logitech G300s Optical Gaming Mouse' 'libinput Accel Speed' -1
 nitrogen --restore &
 dunst &
+picom -b &
 
 bspc monitor -d I II III IV V VI
 
