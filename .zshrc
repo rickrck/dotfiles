@@ -81,9 +81,22 @@ setopt hist_reduce_blanks
 
 # User configuration
 alias ls="exa --icons"
-alias vim="nvim"
 alias c="clear"
 alias q="exit"
+alias battery="upower -i $(upower -e | grep BAT) | grep percentage"
+alias lpy="cd ~/Code/Learn/Python/ && nvim"
+alias codewebpro="nvim ~/Code/WebPro/"
+alias nvim="time nvim"
+alias gcs="git commit -s"
+alias lg="lazygit"
+alias xampp="sudo xampp start"
+alias ssuspend="systemctl suspend"
+alias shibernate="systemctl hibernate"
+alias sem6="cd ~/kuliah/sem6/"
+alias learn="cd ~/Code/Learn/"
+alias ytdownload="uv run ~/Code/Learn/Python/ytdownloader.py"
+# alias reboot="echo Don't try to reboot me!"
+alias lzd='lazydocker'
 
 eval "$(starship init zsh)"
 
@@ -115,5 +128,13 @@ eval "$(starship init zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 export PATH="$PATH:$HOME/flutter/bin"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 
 eval "$(atuin init zsh)"
+
+export PATH=$PATH:/home/rie/.spicetify
+export PATH="/home/rie/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/rie/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+. "$HOME/.local/bin/env"
+# eval "$(uv generate-shell-completion zsh)"
